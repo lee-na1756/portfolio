@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>CONTACT | NAOKO OHNO Portfolio</title>
+    <meta name="description"
+        content="Webデザイナー NAOKO OHNOへのお問い合わせページです。Webサイト制作やリニューアル、デザインのご相談など、お問い合わせフォームよりお気軽にご連絡ください。">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+    <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon-.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+
+    <!-- JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/contact.js" defer></script>
+</head>
+
+
+<body class="contact-page" id="top">
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-header__inner container">
+            <a class="site-header__logo" href="../index.html" lang="en">NAOKO OHNO</a>
+
+            <!-- 共通JavaScriptの初期化後にメニューボタンを有効にする。 -->
+            <button class="site-header__menu-toggle" type="button" aria-label="メニューを開く" aria-controls="site-navigation"
+                aria-expanded="false" disabled>
+                <span class="site-header__menu-line" aria-hidden="true"></span>
+                <span class="site-header__menu-line" aria-hidden="true"></span>
+            </button>
+
+            <!-- PC・スマートフォン共通のナビゲーション。SPの開閉は共通JavaScriptで制御する。 -->
+            <nav class="site-header__nav" id="site-navigation" aria-label="メインナビゲーション">
+                <div class="site-header__menu-panel">
+                    <a class="site-header__menu-brand" href="../index.html" lang="en">NAOKO OHNO</a>
+                    <ul class="site-header__nav-list">
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="../index.html#works" lang="en"><span
+                                    class="site-header__nav-label">WORKS</span><span class="site-header__nav-subtitle"
+                                    lang="ja">つくったもの</span></a>
+                        </li>
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="../index.html#about" lang="en"><span
+                                    class="site-header__nav-label">ABOUT</span><span class="site-header__nav-subtitle"
+                                    lang="ja">わたしについて</span></a>
+                        </li>
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="#contact" lang="en"><span
+                                    class="site-header__nav-label">CONTACT</span><span class="site-header__nav-subtitle"
+                                    lang="ja">お問い合わせ</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main inquiry" id="contact" aria-labelledby="inquiry-title">
+        <div class="inquiry__inner container">
+            <div class="inquiry__introduction">
+                <header class="inquiry__heading">
+                    <h1 class="inquiry__title" id="inquiry-title" lang="en">CONTACT</h1>
+                    <p class="inquiry__subtitle">お問い合わせ</p>
+                </header>
+                <p class="inquiry__lead">ご相談・お問い合わせは、<br>下記フォームよりお送りください。</p>
+                <p class="inquiry__reply">内容を確認後、通常3営業日以内を目安にご返信いたします。</p>
+            </div>
+
+            <!-- TODO: 送信先が決まったらフォームの送信処理を実装する。
+                 現在はHTML/CSSのデザインのみ。SENDは送信を行わないtype="button"とする。 -->
+
+            <form class="contact-form" action="https://formspree.io/f/xaeqadwv" method="POST"
+                aria-labelledby="inquiry-title">
+
+                <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-name">お名前</label>
+                    <input class="contact-form__input" id="contact-name" name="name" type="text" autocomplete="name"
+                        required placeholder="例）大野 奈緒子">
+                </div>
+
+                <div class="contact-form__field">
+                    <label class="contact-form__label" for="contact-email">メールアドレス</label>
+                    <input class="contact-form__input" id="contact-email" name="email" type="email" autocomplete="email"
+                        required placeholder="例）example@email.com">
+                </div>
+
+                <fieldset class="contact-form__types">
+                    <legend class="contact-form__label">お問い合わせ種別</legend>
+                    <div class="contact-form__choices">
+
+                        <label class="contact-form__choice">
+                            <input class="contact-form__choice-input" type="radio" name="inquiry_type" value="website">
+                            <span class="contact-form__choice-label">Webサイト制作</span>
+                        </label>
+
+                        <label class="contact-form__choice">
+                            <input class="contact-form__choice-input" type="radio" name="inquiry_type" value="renewal">
+                            <span class="contact-form__choice-label">リニューアル</span>
+                        </label>
+
+                        <label class="contact-form__choice">
+                            <input class="contact-form__choice-input" type="radio" name="inquiry_type" value="design">
+                            <span class="contact-form__choice-label">デザインのみ</span>
+                        </label>
+
+                        <label class="contact-form__choice">
+                            <input class="contact-form__choice-input" type="radio" name="inquiry_type"
+                                value="undecided">
+                            <span class="contact-form__choice-label">まだ決まっていない</span>
+                        </label>
+
+                    </div>
+                </fieldset>
+
+                <div class="contact-form__field contact-form__field--message">
+                    <label class="contact-form__label" for="contact-message">お問い合わせ内容</label>
+                    <textarea class="contact-form__textarea" id="contact-message" name="message"
+                        aria-describedby="contact-privacy" required placeholder="ご相談内容を自由にご記入ください。"></textarea>
+                </div>
+
+                <p class="contact-form__privacy" id="contact-privacy">
+                    ※ご入力いただいた個人情報は、お問い合わせへの回答・ご連絡のためにのみ利用いたします。
+                    <br class="contact-form__privacy-break">
+                    詳しくは<a class="contact-form__privacy-link" href="../privacy-policy/index.html">プライバシーポリシー</a>をご覧ください。
+                </p>
+
+
+                <p class="contact-form__error" id="contact-error" role="alert" hidden>
+                    送信できませんでした。時間をおいて、もう一度お試しください。
+                </p>
+
+                <button class="contact-form__send" type="submit" lang="en">SEND</button>
+            </form>
+
+            <!-- 送信完了メッセージ -->
+            <div class="contact-form__success" id="contact-success" hidden>
+                <span class="contact-form__success-icon" aria-hidden="true">✓</span>
+
+                <h2 class="contact-form__success-title" tabindex="-1">
+                    お問い合わせありがとうございます。
+                </h2>
+
+                <p class="contact-form__success-text">
+                    メッセージの送信が完了しました。<br>
+                    内容を確認後、通常3営業日以内を目安にご返信いたします。
+                </p>
+
+                <a class="contact-form__success-link" href="../index.html">
+                    BACK TO HOME ↗
+                </a>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner container">
+            <div class="site-footer__main">
+                <div class="site-footer__identity" lang="en">
+                    <a class="site-footer__logo" href="../index.html">NAOKO OHNO</a>
+                    <p class="site-footer__role">WEB DESIGNER</p>
+                    <p class="site-footer__location">SAPPORO / JAPAN</p>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+                    <ul class="site-footer__nav-list">
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="../index.html#works" lang="en">WORKS</a>
+                        </li>
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="../index.html#about" lang="en">ABOUT</a>
+                        </li>
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="#contact" lang="en">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a class="site-footer__back-to-top" href="#top" lang="en">
+                    <span class="site-footer__back-to-top-label">BACK TO TOP</span>
+                    <span class="site-footer__back-to-top-icon" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="site-footer__bottom" lang="en">
+                <small class="site-footer__copyright">&copy; 2026 NAOKO OHNO</small>
+                <p class="site-footer__edition">PORTFOLIO 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

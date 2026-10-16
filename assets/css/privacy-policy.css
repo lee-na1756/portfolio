@@ -1,0 +1,320 @@
+@charset "UTF-8";
+
+/* PRIVACY POLICY — page-scoped adjustments to the shared portfolio styles. */
+.privacy-page .site-header {
+  position: relative;
+}
+
+.privacy-page .site-header__logo {
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+
+.privacy-page .site-header__menu-toggle {
+  gap: 6px;
+  color: #9a9490;
+}
+
+.privacy-page .policy {
+  padding-block: 84px 144px;
+}
+
+.privacy-page .policy__inner {
+  max-width: 600px;
+}
+
+.privacy-page .policy__introduction,
+.privacy-page .policy__details {
+  min-width: 0;
+}
+
+.privacy-page .policy__title {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 54px;
+  letter-spacing: 5.4px;
+}
+
+.privacy-page .policy__subtitle,
+.privacy-page .policy__lead,
+.privacy-page .policy-section__title,
+.privacy-page .policy-section__text,
+.privacy-page .policy__date {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+.privacy-page .policy__subtitle {
+  color: #77736f;
+  font-size: 11px;
+  line-height: 22px;
+  letter-spacing: .6px;
+}
+
+.privacy-page .policy__lead {
+  margin-top: 32px;
+  color: #77736f;
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: .65px;
+  overflow-wrap: break-word;
+}
+
+.privacy-page .policy__desktop-break {
+  display: none;
+}
+
+.privacy-page .policy__details {
+  margin-top: 25px;
+}
+
+.privacy-page .policy__list {
+  border-top: 1px solid #b8b4ae;
+  list-style: none;
+}
+
+.privacy-page .policy__item {
+  padding-block: 28px 22px;
+  border-bottom: 1px solid #b8b4ae;
+}
+
+/* These two items have the tighter lower spacing shown in the mobile comp. */
+.privacy-page .policy__item:first-child,
+.privacy-page .policy__item:nth-child(3) {
+  padding-bottom: 0;
+}
+
+.privacy-page .policy__item:last-child {
+  border-color: var(--color-line);
+}
+
+.privacy-page .policy-section {
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  column-gap: 9px;
+  align-items: start;
+}
+
+.privacy-page .policy-section__number {
+  font-family: var(--font-accent);
+  font-size: 10px;
+  font-weight: 400;
+  height: 26px;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+.privacy-page .policy-section__title {
+  min-width: 0;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  overflow-wrap: break-word;
+}
+
+.privacy-page .policy-section__text {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-top: 10px;
+  color: #77736f;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  overflow-wrap: break-word;
+}
+
+.privacy-page .policy-section__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.privacy-page .policy-section__link [lang="en"] {
+  font-family: var(--font-sans);
+  line-height: 1;
+}
+
+.privacy-page .policy__signature {
+  margin-top: 32px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.privacy-page .policy__date {
+  color: #77736f;
+  letter-spacing: 0;
+}
+
+.privacy-page .policy__author {
+  font-family: var(--font-sans);
+  line-height: 20px;
+  letter-spacing: .3px;
+}
+
+.privacy-page .site-footer {
+  border-top: 1px solid #b8b4ae;
+  padding-bottom: 31px;
+}
+
+.privacy-page .site-footer__logo {
+  letter-spacing: 2px;
+}
+
+@media (min-width: 769px) {
+  .privacy-page .site-header__inner {
+    padding-left: clamp(40px, 6.805556vw, 98px);
+    padding-right: clamp(40px, 9.027778vw, 130px);
+  }
+
+  .privacy-page .site-header__logo {
+    font-size: 17px;
+    letter-spacing: 1.8px;
+  }
+
+  .privacy-page .site-header__nav {
+    margin-top: 2px;
+  }
+
+  .privacy-page .site-header__nav-list {
+    gap: 43px;
+  }
+
+  .privacy-page .policy {
+    padding-top: clamp(130px, 20.694444vw, 298px);
+    padding-bottom: 162px;
+  }
+
+  .privacy-page .policy__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 410fr) minmax(0, 736fr);
+    align-items: start;
+    column-gap: clamp(32px, 4.027778vw, 58px);
+    width: calc(100% - 80px);
+    max-width: 1280px;
+    padding-left: clamp(0px, calc((100vw - 769px) * .113264), 76px);
+  }
+
+  .privacy-page .policy__introduction {
+    margin-top: -6px;
+  }
+
+  .privacy-page .policy__title {
+    font-size: clamp(34px, 4.444444vw, 64px);
+    font-weight: 500;
+    line-height: 1.40625;
+    letter-spacing: clamp(3.4px, .958333vw, 13.8px);
+  }
+
+  .privacy-page .policy__subtitle {
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+  }
+
+  .privacy-page .policy__lead {
+    max-width: 390px;
+    margin-top: 78px;
+    color: var(--color-text);
+    font-size: clamp(13px, 1.111111vw, 16px);
+    line-height: 29px;
+    letter-spacing: 2.4px;
+  }
+
+  .privacy-page .policy__desktop-break {
+    display: block;
+  }
+
+  .privacy-page .policy__details {
+    margin-top: 10px;
+  }
+
+  .privacy-page .policy__list {
+    border-top: 0;
+  }
+
+  .privacy-page .policy__item:nth-child(n) {
+    padding-block: 57px 23px;
+    border-color: var(--color-line);
+  }
+
+  .privacy-page .policy__item:nth-child(odd) {
+    padding-bottom: 24px;
+  }
+
+  .privacy-page .policy__item:first-child {
+    padding-top: 0;
+  }
+
+  .privacy-page .policy-section {
+    grid-template-columns: clamp(24px, 4.583333vw, 66px) minmax(0, 1fr);
+    column-gap: 20px;
+  }
+
+  .privacy-page .policy-section__number {
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 1.6px;
+  }
+
+  .privacy-page .policy-section__title {
+    position: relative;
+    font-size: clamp(16px, 1.388889vw, 20px);
+    line-height: 32px;
+    letter-spacing: 2px;
+  }
+
+  /* Short vertical rule beside each PC heading, as shown in the comp. */
+  .privacy-page .policy-section__title::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -20px;
+    width: 1px;
+    height: 51px;
+    background: #d8d6d3;
+  }
+
+  .privacy-page .policy-section__text {
+    grid-column: 2;
+    margin-top: 16px;
+    color: var(--color-text);
+    font-size: clamp(13px, 1.111111vw, 16px);
+    line-height: 29px;
+    letter-spacing: 2.4px;
+  }
+
+  .privacy-page .policy__signature {
+    margin-top: 56px;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: 2.4px;
+  }
+
+  .privacy-page .policy__date {
+    color: var(--color-text);
+    letter-spacing: 1.6px;
+  }
+
+  .privacy-page .policy__author {
+    line-height: 29px;
+    letter-spacing: 2.4px;
+  }
+
+  .privacy-page .site-footer {
+    border-top: 0;
+    padding-bottom: 92px;
+  }
+
+  .privacy-page .site-footer__role,
+  .privacy-page .site-footer__location {
+    color: var(--color-text);
+  }
+}
+
+/* Let the introductory sentences wrap naturally in the narrower PC column. */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .privacy-page .policy__lead .policy__desktop-break {
+    display: none;
+  }
+}

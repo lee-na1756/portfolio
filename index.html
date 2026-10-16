@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ja">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>NAOKO OHNO | Web Designer Portfolio</title>
+    <meta name="description"
+        content="札幌を拠点とするWebデザイナー NAOKO OHNOのポートフォリオ。想いをくみ取り、伝わるかたちにすることを大切に、Webサイトの企画・デザイン・制作に取り組んでいます。">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+    <link rel="icon" href="./assets/images/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon-.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js" defer></script>
+    <script>
+        // Paint the first-visit cover before the Hero; fail open if enhancement is unavailable.
+        try {
+            if (!location.hash && !matchMedia('(prefers-reduced-motion: reduce)').matches &&
+                !sessionStorage.getItem('naoko-portfolio-opening')) {
+                document.documentElement.dataset.opening = 'pending';
+                window.setTimeout(() => document.documentElement.removeAttribute('data-opening'), 2400);
+            }
+        } catch (_) { /* Storage restrictions keep the ordinary page available. */ }
+    </script>
+</head>
+
+
+<body id="top">
+    <div class="site-opening" hidden>
+        <span class="site-opening__name" lang="en"></span>
+    </div>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="site-header__inner container">
+            <a class="site-header__logo" href="#top" lang="en">NAOKO OHNO</a>
+
+            <!-- 共通JavaScriptの初期化後にメニューボタンを有効にする。 -->
+            <button class="site-header__menu-toggle" type="button" aria-label="メニューを開く" aria-controls="site-navigation"
+                aria-expanded="false" disabled>
+                <span class="site-header__menu-line" aria-hidden="true"></span>
+                <span class="site-header__menu-line" aria-hidden="true"></span>
+            </button>
+
+            <!-- PC・スマートフォン共通のナビゲーション。SPの開閉は共通JavaScriptで制御する。 -->
+            <nav class="site-header__nav" id="site-navigation" aria-label="メインナビゲーション">
+                <div class="site-header__menu-panel">
+                    <a class="site-header__menu-brand" href="#top" lang="en">NAOKO OHNO</a>
+                    <ul class="site-header__nav-list">
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="#works" lang="en"><span
+                                    class="site-header__nav-label">WORKS</span><span class="site-header__nav-subtitle"
+                                    lang="ja">つくったもの</span></a>
+                        </li>
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="#about" lang="en"><span
+                                    class="site-header__nav-label">ABOUT</span><span class="site-header__nav-subtitle"
+                                    lang="ja">わたしについて</span></a>
+                        </li>
+                        <li class="site-header__nav-item">
+                            <a class="site-header__nav-link" href="#contact" lang="en"><span
+                                    class="site-header__nav-label">CONTACT</span><span class="site-header__nav-subtitle"
+                                    lang="ja">お問い合わせ</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+        <!-- Hero -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__inner container">
+                <h1 class="hero__title" id="hero-title" lang="en" aria-label="NAOKO OHNO">
+                    <span class="hero__name-line" aria-hidden="true"><span class="hero__letter">N</span><span
+                            class="hero__letter">A</span><span class="hero__letter">O</span><span
+                            class="hero__letter">K</span><span class="hero__letter">O</span></span>
+                    <span class="hero__name-line" aria-hidden="true"><span class="hero__letter">O</span><span
+                            class="hero__letter">H</span><span class="hero__letter">N</span><span
+                            class="hero__letter">O</span></span>
+                </h1>
+                <p class="hero__tagline">想いに、光を。</p>
+                <p class="hero__description" lang="en">
+                    <span class="hero__description-line">PORTFOLIO</span>
+                    <span class="hero__description-line">WEB DESIGNER</span>
+                </p>
+                <a class="hero__scroll" href="#works" lang="en">
+                    <span class="hero__scroll-label">SCROLL</span>
+                    <span class="hero__scroll-line" aria-hidden="true"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Works -->
+        <section class="works" id="works" aria-labelledby="works-title">
+            <div class="works__inner container">
+                <header class="section-heading works__heading">
+                    <h2 class="section-heading__title" id="works-title" lang="en">WORKS</h2>
+                    <p class="section-heading__subtitle">つくったもの</p>
+                </header>
+
+                <!-- 画像→説明の共通DOM。PC版の左右配置・画像サイズはCSSで調整する。 -->
+                <ul class="works__list">
+                    <li class="works__item works__item--kestra">
+                        <article class="work-card work-card--featured" aria-labelledby="work-kestra-title">
+                            <div class="work-card__media">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="assets/images/kestra_toppc.webp"
+                                        width="1712" height="1070">
+                                    <img class="work-card__image" src="assets/images/kestra_topsp.webp"
+                                        alt="美容室KESTRAのWebサイト" width="684" height="444" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__category" lang="en">CLIENT WORK</p>
+                                <h3 class="work-card__title" id="work-kestra-title" lang="en">KESTRA</h3>
+                                <p class="work-card__type" lang="en">Hair Salon Website</p>
+
+                                <a class="work-card__link text-link" href="works/kestra/index.html" lang="en">
+                                    <span class="text-link__label">View More</span>
+                                    <span class="text-link__decoration" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="works__item works__item--sugutabe">
+                        <article class="work-card" aria-labelledby="work-sugutabe-title">
+                            <div class="work-card__media">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="assets/images/sugutabe_toppc.webp"
+                                        width="1052" height="800">
+                                    <img class="work-card__image" src="assets/images/%20sugutabe_topsp.webp"
+                                        alt="スグ食べのランディングページ" width="684" height="444" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__category" lang="en">SCHOOL PROJECT</p>
+                                <h3 class="work-card__title" id="work-sugutabe-title" lang="en">SUGUTABE</h3>
+                                <!-- PC版の文言を採用。スマートフォン版ではLanding Page。 -->
+                                <p class="work-card__type" lang="en">Lp Design</p>
+
+                                <a class="work-card__link text-link" href="works/sugutabe/index.html" lang="en">
+                                    <span class="text-link__label">View More</span>
+                                    <span class="text-link__decoration" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="works__item works__item--graphic">
+                        <article class="work-card" aria-labelledby="work-graphic-title">
+                            <div class="work-card__media">
+                                <picture>
+                                    <source media="(min-width: 769px)" srcset="assets/images/graphic_toppc.webp"
+                                        width="1052" height="800">
+                                    <img class="work-card__image" src="assets/images/graphic_topsp.webp"
+                                        alt="COMING SOON" width="684" height="444" loading="lazy" decoding="async">
+                                </picture>
+                                <p class="work-card__status" lang="en">COMING SOON</p>
+                            </div>
+                            <div class="work-card__body">
+                                <p class="work-card__category" lang="en">GRAPHIC DESIGN</p>
+                                <h3 class="work-card__title" id="work-graphic-title" lang="en">GRAPHIC</h3>
+                                <p class="work-card__type" lang="en">Print Design</p>
+
+                                <a class="work-card__link text-link" href="works/graphic/index.html" lang="en">
+                                    <span class="text-link__label">View More</span>
+                                    <span class="text-link__decoration" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="about__inner container">
+                <header class="section-heading about__heading">
+                    <h2 class="section-heading__title" id="about-title" lang="en">ABOUT</h2>
+                    <p class="section-heading__subtitle">わたしについて</p>
+                </header>
+
+                <div class="profile">
+                    <div class="profile__media">
+                        <picture>
+                            <source media="(min-width: 769px)" srcset="assets/images/Rectangle%2011.webp" width="880"
+                                height="1160">
+                            <img class="profile__image" src="assets/images/profile%20imagesp.webp" alt="大野奈緒子のプロフィール写真"
+                                width="684" height="856" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <div class="profile__body">
+                        <h3 class="profile__name" lang="en">NAOKO OHNO</h3>
+                        <p class="profile__name-ja">大野 奈緒子</p>
+                        <div class="profile__description">
+                            <p class="profile__paragraph"><span class="profile__line">人の想いや、その人らしさをすくいとり、</span><span
+                                    class="profile__line">伝わるかたちに整える。</span></p>
+                            <p class="profile__paragraph"><span
+                                    class="profile__line">接客・販売やハンドメイドでの制作経験を通して、</span><span
+                                    class="profile__line">人と関わり、考え、ものをつくることを続けてきました。</span></p>
+                            <p class="profile__paragraph"><span class="profile__line">現在はWebデザインを中心に、</span><span
+                                    class="profile__line">「誰に、何を届けたいのか」を考えながら、</span><span
+                                    class="profile__line">企画・情報設計からデザイン、実装まで取り組んでいます。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="story" aria-labelledby="story-title">
+                    <div class="story__intro">
+                        <header class="subsection-heading story__heading">
+                            <h3 class="subsection-heading__title" id="story-title" lang="en">MY STORY</h3>
+                            <p class="subsection-heading__subtitle">これまでの歩み</p>
+                        </header>
+                        <p class="story__lead">人と関わり、つくることを通して<br>今の自分にたどり着きました。</p>
+                    </div>
+
+                    <ol class="story__list">
+                        <li class="story__item">
+                            <span class="story__number" aria-hidden="true">01</span>
+                            <h4 class="story__item-title">接客・販売の経験</h4>
+                            <p class="story__item-description">お客様とのコミュニケーションを通して、<br>相手の気持ちや背景に気づき、寄り添うことの大切さを学びました。
+                            </p>
+                        </li>
+                        <li class="story__item">
+                            <span class="story__number" aria-hidden="true">02</span>
+                            <h4 class="story__item-title">ハンドメイドの経験</h4>
+                            <p class="story__item-description">
+                                ものづくりを通して、ひとつずつ丁寧につくることや、「どう届けるか」「どう見せるか」といった視点を持つようになりました。</p>
+                        </li>
+                        <li class="story__item">
+                            <span class="story__number" aria-hidden="true">03</span>
+                            <h4 class="story__item-title">Webデザインへ</h4>
+                            <!-- PC版にある末尾の1文を含めた共通本文。 -->
+                            <p class="story__item-description">
+                                これまでの経験を活かし、「聞く・考える・つくる」という流れを大切にしています。現在は、企画や情報設計からデザイン・実装まで取り組んでいます。</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="skills" aria-labelledby="skills-title">
+                    <div class="skills__intro">
+                        <header class="subsection-heading skills__heading">
+                            <h3 class="subsection-heading__title" id="skills-title" lang="en">SKILLS</h3>
+                            <p class="subsection-heading__subtitle">できること</p>
+                        </header>
+                        <p class="skills__lead"><span class="skills__line">Webサイトの制作を中心に、</span><span
+                                class="skills__line">はじめの整理から公開までお手伝いします。</span></p>
+                    </div>
+
+                    <div class="skills__groups">
+                        <div class="skills__group">
+                            <h4 class="skills__group-title" lang="en">DESIGN</h4>
+                            <ul class="skills__list" lang="en">
+                                <li class="skills__item">Web Design</li>
+                                <li class="skills__item">UI Design</li>
+                                <li class="skills__item">Information Design</li>
+                                <li class="skills__item">Graphic Design</li>
+                            </ul>
+                        </div>
+                        <div class="skills__group">
+                            <!-- 見出しの綴りはスマートフォン版に合わせる。 -->
+                            <h4 class="skills__group-title" lang="en">DEVELOPMENT</h4>
+                            <ul class="skills__list" lang="en">
+                                <li class="skills__item">HTML / CSS</li>
+                                <li class="skills__item">JavaScript / jQuery</li>
+                                <li class="skills__item">WordPress</li>
+                                <li class="skills__item">SEO / Analytics</li>
+                            </ul>
+                        </div>
+                        <div class="skills__group">
+                            <h4 class="skills__group-title" lang="en">TOOLS</h4>
+                            <ul class="skills__list" lang="en">
+                                <li class="skills__item">Figma</li>
+                                <li class="skills__item">Photoshop</li>
+                                <li class="skills__item">Illustrator</li>
+                                <li class="skills__item">VS Code</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+            <div class="contact__inner container">
+                <header class="section-heading contact__heading">
+                    <h2 class="section-heading__title" id="contact-title" lang="en">CONTACT</h2>
+                    <p class="section-heading__subtitle">お問い合わせ</p>
+                </header>
+
+                <div class="contact__body">
+                    <p class="contact__lead" lang="en">Have a project in mind?</p>
+                    <p class="contact__description">
+                        <span class="contact__description-line">つくりたいものや、大切にしたいこと。</span>
+                        <span class="contact__description-line">まだうまく言葉になっていなくても大丈夫です。</span>
+                        <span class="contact__description-line">まずは、あなたのお話を聞かせてください。</span>
+                        <span class="contact__description-line">小さなご相談からでも、お気軽にどうぞ。</span>
+                    </p>
+
+                    <a class="contact__link text-link text-link--arrow" href="contact/index.html" lang="en">
+                        <span class="text-link__label">CONTACT ME</span>
+                        <span class="text-link__decoration" aria-hidden="true">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="assets/images/arrow.svg" width="440"
+                                    height="18">
+                                <img src="./assets/images/arrow.svg" alt="">
+                            </picture>
+                        </span>
+
+                    </a>
+
+
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="site-footer__inner container">
+            <div class="site-footer__main">
+                <div class="site-footer__identity" lang="en">
+                    <a class="site-footer__logo" href="#top">NAOKO OHNO</a>
+                    <p class="site-footer__role">WEB DESIGNER</p>
+                    <p class="site-footer__location">SAPPORO / JAPAN</p>
+                </div>
+
+                <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+                    <ul class="site-footer__nav-list">
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="#works" lang="en">WORKS</a>
+                        </li>
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="#about" lang="en">ABOUT</a>
+                        </li>
+                        <li class="site-footer__nav-item">
+                            <a class="site-footer__nav-link" href="#contact" lang="en">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a class="site-footer__back-to-top" href="#top" lang="en">
+                    <span class="site-footer__back-to-top-label">BACK TO TOP</span>
+                    <span class="site-footer__back-to-top-icon" aria-hidden="true">↗</span>
+                </a>
+            </div>
+
+            <div class="site-footer__bottom" lang="en">
+                <small class="site-footer__copyright">&copy; 2026 NAOKO OHNO</small>
+                <p class="site-footer__edition">PORTFOLIO 2026</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

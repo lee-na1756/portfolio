@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+/* GRAPHIC: reuse the shared Header, Contact and Footer from style.css.
+   The supplied design is a Coming Soon page; project content is still pending. */
+.project-page--graphic .site-header {
+  position: relative;
+  background: var(--color-page);
+}
+
+.project-page--graphic .project--graphic {
+  background: var(--color-works);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.project-page--graphic .project--graphic .container {
+  max-width: 600px;
+}
+
+.project-page--graphic .project-hero {
+  padding-top: 64px;
+}
+
+.project-page--graphic .project-hero__category {
+  font-family: var(--font-detail-heading);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 1px;
+}
+
+.project-page--graphic .project-hero__title {
+  margin-top: 16px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 6px;
+}
+
+.project-page--graphic .project-hero__type {
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 1.1px;
+}
+
+.project-page--graphic .graphic-pending {
+  margin-top: clamp(110px, 35.384615vw, 138px);
+}
+
+.project-page--graphic .graphic-pending__title {
+  font-family: var(--font-accent);
+  font-size: clamp(26px, 7.692308vw, 30px);
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.project-page--graphic .graphic-pending__description {
+  margin-top: 66px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: .65px;
+  overflow-wrap: break-word;
+}
+
+.project-page--graphic .project-navigation {
+  padding-block: clamp(100px, 32.307692vw, 126px) 80px;
+}
+
+.project-page--graphic .project-navigation__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-page--graphic .project-navigation__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+/* Match the existing detail-page breakpoint and bounded desktop container. */
+@media (min-width: 769px) {
+  .project-page--graphic .project--graphic .container {
+    width: calc(100% - 80px);
+    max-width: 1124px;
+  }
+
+  .project-page--graphic .project-hero {
+    padding-top: clamp(130px, 17.5vw, 252px);
+  }
+
+  .project-page--graphic .project-hero__category {
+    font-family: var(--font-accent);
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 1.4px;
+  }
+
+  .project-page--graphic .project-hero__title {
+    margin-top: 28px;
+    font-size: clamp(40px, 4.444444vw, 64px);
+    line-height: 1.25;
+    letter-spacing: clamp(8px, 1.111111vw, 16px);
+  }
+
+  .project-page--graphic .project-hero__type {
+    margin-top: 4px;
+    font-size: clamp(13px, 1.111111vw, 16px);
+    line-height: 24px;
+    letter-spacing: .8px;
+  }
+
+  .project-page--graphic .graphic-pending {
+    margin-top: 42px;
+  }
+
+  .project-page--graphic .graphic-pending__inner {
+    position: relative;
+  }
+
+  /* The two fine rules appear only in the supplied desktop comp. */
+
+  .project-page--graphic .graphic-pending__title {
+    font-size: clamp(40px, 4.861111vw, 70px);
+    line-height: 90px;
+    letter-spacing: 3.6px;
+  }
+
+  .project-page--graphic .graphic-pending__description {
+    max-width: 464px;
+    margin: clamp(80px, 8.888889vw, 128px) auto 0;
+    font-size: clamp(16px, 1.25vw, 18px);
+    line-height: 32px;
+    letter-spacing: 3.6px;
+  }
+
+  .project-page--graphic .project-navigation {
+    padding-block: clamp(130px, 15.486111vw, 223px) 59px;
+  }
+
+  .project-page--graphic .project-navigation .project-navigation__inner {
+    max-width: 1296px;
+  }
+
+  .project-page--graphic .project-navigation__link {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1.8px;
+  }
+
+  /* Same fluid Contact heading used by KESTRA and SUGUTABE. */
+  .project-page--graphic .contact__lead {
+    font-size: clamp(32px, 4.166667vw, 60px);
+    line-height: 1.4;
+    letter-spacing: clamp(3.2px, .416667vw, 6px);
+  }
+}
