@@ -1,0 +1,748 @@
+@charset "UTF-8";
+
+/* KESTRA: mobile-first layout, based on the 390px comp.
+   Header, Contact and Footer inherit their shared design from style.css. */
+
+.project-page--kestra .site-header {
+  position: relative;
+  background: var(--color-page);
+}
+
+.project-page--kestra .project--kestra {
+  background: var(--color-works);
+  color: #3a3632;
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+/* Keep intermediate mobile widths readable while preserving the 24px gutters. */
+.project-page--kestra .project--kestra .container {
+  max-width: 600px;
+}
+
+.project-page--kestra .project--kestra picture {
+  display: block;
+}
+
+.project-page--kestra .project--kestra p,
+.project-page--kestra .project--kestra dd {
+  overflow-wrap: break-word;
+}
+
+/* ========================================
+   Project Hero
+======================================== */
+
+.project-page--kestra .project-hero {
+  padding-top: 64px;
+}
+
+.project-page--kestra .project-hero__inner {
+  display: grid;
+  grid-template-areas: "heading" "media" "body";
+}
+
+.project-page--kestra .project-hero__heading {
+  grid-area: heading;
+}
+
+.project-page--kestra .project-hero__category {
+  font-family: var(--font-detail-heading);
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 1px;
+}
+
+.project-page--kestra .project-hero__title {
+  margin-top: 16px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 6px;
+}
+
+.project-page--kestra .project-hero__type {
+  font-size: 11px;
+  line-height: 20px;
+  letter-spacing: 1.1px;
+  word-spacing: 6px;
+}
+
+.project-page--kestra .project-hero__media {
+  grid-area: media;
+  margin-top: 38px;
+}
+
+.project-page--kestra .project-hero__image {
+  width: calc(100% - 2px);
+  height: auto;
+}
+
+.project-page--kestra .project-hero__body {
+  grid-area: body;
+  margin-top: 37px;
+}
+
+.project-page--kestra .project-hero__introduction,
+.project-page--kestra .project-overview__description,
+.project-page--kestra .project-process__description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: .65px;
+}
+
+.project-page--kestra .project-hero__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  margin-top: 11px;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+}
+
+.project-page--kestra .project-hero__link .text-link__decoration {
+  position: relative;
+  width: 24px;
+  height: 1px;
+  margin-right: 3px;
+  background: var(--color-muted);
+}
+
+.project-page--kestra .project-hero__link .text-link__decoration::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  width: 5px;
+  height: 5px;
+  border: 1px solid var(--color-muted);
+  border-radius: 50%;
+  background: var(--color-works);
+}
+
+/* ========================================
+   Shared Headings
+======================================== */
+
+.project-page--kestra .project-section-heading__title {
+  font-family: var(--font-detail-heading);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 1.4px;
+}
+
+.project-page--kestra .project-section-heading__subtitle {
+  margin-top: 2px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 1.1px;
+}
+
+/* ========================================
+   Project Overview
+======================================== */
+
+.project-page--kestra .project-overview {
+  margin-top: 100px;
+}
+
+.project-page--kestra .project-overview .project-section-heading__title {
+  max-width: 220px;
+}
+
+.project-page--kestra .project-overview__meta {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0 0;
+  padding-left: 13px;
+  border-left: 1px solid #c9c7c4;
+}
+
+.project-page--kestra .project-overview__term {
+  color: #9a9490;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 1px;
+}
+
+.project-page--kestra .project-overview__value {
+  margin: 3px 0 0;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: .4px;
+}
+
+.project-page--kestra .project-overview__description {
+  margin-top: 29px;
+}
+
+/* ========================================
+   Process
+======================================== */
+
+.project-page--kestra .project-process {
+  margin-top: 72px;
+}
+
+.project-page--kestra .project-process__list {
+  display: grid;
+  gap: 28px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-page--kestra .project-process__item {
+  display: grid;
+  grid-template-columns: 20px minmax(0, 1fr);
+  column-gap: 14px;
+}
+
+.project-page--kestra .project-process__number {
+  padding-top: 1px;
+  color: #9a9490;
+  font-size: 10px;
+  line-height: 20px;
+}
+
+.project-page--kestra .project-process__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+}
+
+.project-page--kestra .project-process__subtitle {
+  margin-top: 2px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #9a9490;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.project-page--kestra .project-process__description {
+  margin-top: 2px;
+}
+
+/* ========================================
+   Design Concept / Color / Typography
+======================================== */
+
+.project-page--kestra .project-concept {
+  margin-top: 136px;
+}
+
+.project-page--kestra .project-concept__body {
+  margin-top: 24px;
+}
+
+.project-page--kestra .project-concept__lead {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 34px;
+  letter-spacing: .9px;
+}
+
+.project-page--kestra .project-concept__description {
+  margin-top: 18px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: .5px;
+}
+
+.project-page--kestra .project-concept__keywords {
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: .6px;
+}
+
+.project-page--kestra .project-style-guide {
+  margin-top: 23px;
+}
+
+.project-page--kestra .project-style-guide__image {
+  width: 100%;
+  max-width: 342px;
+  margin-inline: auto;
+  height: auto;
+  clip-path: inset(1px);
+}
+
+/* ========================================
+   Full Design
+======================================== */
+
+.project-page--kestra .full-design {
+  margin-top: 62px;
+}
+
+.project-page--kestra .full-design__subtitle,
+.project-page--kestra .full-design__scroll {
+  display: none;
+}
+
+.project-page--kestra .full-design__layouts {
+  display: grid;
+  grid-template-columns: minmax(0, 3.405fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+  width: 100%;
+  margin-top: 42px;
+}
+
+.project-page--kestra .full-design__item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  margin: 0;
+}
+
+.project-page--kestra .full-design__frame {
+  position: relative;
+  height: clamp(128px, 40vw, 240px);
+  overflow: hidden;
+  border: 1px solid #7a746e;
+  border-radius: 10px;
+}
+
+.project-page--kestra .full-design__frame--pc {
+  border-width: 3px;
+  border-radius: 6px;
+}
+
+.project-page--kestra .full-design__preview {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* border-radius: inherit; */
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+}
+
+.project-page--kestra .full-design__preview::-webkit-scrollbar {
+  display: none;
+}
+
+/* スクロールできることを示す細いライン */
+.project-page--kestra .full-design__frame::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  right: 4px;
+  width: 1px;
+  height: 28px;
+  background: #b8b4ae;
+  opacity: .8;
+  pointer-events: none;
+}
+
+.project-page--kestra .full-design__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-page--kestra .full-design__caption {
+  margin-top: 16px;
+  color: #3A3632;
+  font-size: 9px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 1.35px;
+  white-space: nowrap;
+}
+
+.project-page--kestra .full-design__item--sp .full-design__caption {
+  justify-self: end;
+  width: max-content;
+  text-align: right;
+}
+
+/* ========================================
+   Project Navigation
+======================================== */
+
+.project-page--kestra .project-navigation {
+  padding-block: 78px 9px;
+}
+
+.project-page--kestra .project-navigation__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-page--kestra .project-navigation__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+.project-page--kestra .project-navigation__link--next {
+  gap: 8px;
+}
+
+/* Desktop: 1440px reference, with flexible columns down to 769px. */
+@media (min-width: 769px) {
+  .project-page--kestra .project--kestra .container {
+    width: calc(100% - 80px);
+    max-width: 1124px;
+  }
+
+  .project-page--kestra .project-hero {
+    padding-top: clamp(80px, 11.25vw, 162px);
+  }
+
+  .project-page--kestra .project-hero__inner {
+    grid-template-areas: "heading media" "body media";
+    grid-template-columns: minmax(0, 380fr) minmax(0, 684fr);
+    grid-template-rows: auto 1fr;
+    column-gap: clamp(24px, 4.166667vw, 60px);
+  }
+
+  .project-page--kestra .project-hero__heading {
+    padding-top: clamp(40px, 9.375vw, 135px);
+  }
+
+  .project-page--kestra .project-hero__category {
+    display: block;
+    font-family: "Ovo", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    color: #3A3632;
+  }
+
+  .project-page--kestra .project-hero__title {
+    margin-top: 22px;
+    font-size: clamp(40px, 4.444444vw, 64px);
+    line-height: 1.25;
+    letter-spacing: .25em;
+  }
+
+  .project-page--kestra .project-hero__type {
+    margin-top: 6px;
+    font-size: clamp(13px, 1.111111vw, 16px);
+    line-height: 24px;
+    letter-spacing: .8px;
+  }
+
+  .project-page--kestra .project-hero__media {
+    margin-top: 0;
+    align-self: start;
+  }
+
+  .project-page--kestra .project-hero__image {
+    width: 100%;
+  }
+
+  .project-page--kestra .project-hero__body {
+    margin-top: clamp(24px, 2.986111vw, 43px);
+  }
+
+  .project-page--kestra .project-hero__introduction {
+    max-width: 330px;
+    font-size: clamp(13px, 1.111111vw, 16px);
+    line-height: 1.25;
+    letter-spacing: .8px;
+  }
+
+  .project-page--kestra .project-hero__link {
+    margin-top: clamp(24px, 3.333333vw, 48px);
+    letter-spacing: .6px;
+  }
+
+  .project-page--kestra .project-hero__link .text-link__decoration {
+    width: 40px;
+  }
+
+  .project-page--kestra .project-section-heading__title {
+    font-size: clamp(32px, 2.777778vw, 40px);
+    line-height: 1.2;
+    letter-spacing: .1em;
+  }
+
+  .project-page--kestra .project-section-heading__subtitle {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 1.4px;
+  }
+
+  .project-page--kestra .project-overview {
+    margin-top: clamp(100px, 11.111111vw, 160px);
+  }
+
+  .project-page--kestra .project-overview .project-section-heading__title {
+    max-width: 300px;
+  }
+
+  .project-page--kestra .project-overview .project-section-heading__subtitle {
+    margin-top: 8px;
+  }
+
+  .project-page--kestra .project-overview__body {
+    display: grid;
+    grid-template-columns: minmax(0, 380fr) minmax(0, 684fr);
+    column-gap: clamp(24px, 4.166667vw, 60px);
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .project-page--kestra .project-overview__meta {
+    gap: 9px;
+    margin: 20px 0 0 -30px;
+    padding-left: 29px;
+  }
+
+  .project-page--kestra .project-overview__term {
+    line-height: 14px;
+    letter-spacing: 1.5px;
+  }
+
+  .project-page--kestra .project-overview__value {
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: .7px;
+  }
+
+  .project-page--kestra .project-overview__description {
+    max-width: 528px;
+    margin-top: 0;
+    font-size: clamp(14px, 1.111111vw, 16px);
+    line-height: 29px;
+    letter-spacing: 1.6px;
+  }
+
+  .project-page--kestra .project-process {
+    margin-top: clamp(100px, 10.833333vw, 156px);
+  }
+
+  .project-page--kestra .project-process__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: clamp(24px, 4.166667vw, 60px);
+    max-width: 788px;
+    margin: 58px auto 0;
+  }
+
+  .project-page--kestra .project-process__item {
+    display: block;
+  }
+
+  .project-page--kestra .project-process__number {
+    display: block;
+    padding-top: 0;
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+
+  .project-page--kestra .project-process__title {
+    margin-top: 6px;
+    font-family: "ovo";
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 2px;
+  }
+
+  .project-page--kestra .project-process__subtitle {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: .6px;
+  }
+
+  .project-page--kestra .project-process__description {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 1.8px;
+  }
+
+  .project-page--kestra .project-process .project-section-heading__subtitle,
+  .project-page--kestra .project-concept .project-section-heading__subtitle {
+    margin-top: -6px;
+  }
+
+  .project-page--kestra .project-concept {
+    margin-top: clamp(100px, 11.111111vw, 160px);
+  }
+
+  .project-page--kestra .project-concept__body {
+    max-width: 844px;
+    margin: 59px auto 0;
+  }
+
+  .project-page--kestra .project-concept__lead {
+    font-size: clamp(20px, 1.805556vw, 26px);
+    line-height: 43px;
+    letter-spacing: 2.6px;
+  }
+
+  .project-page--kestra .project-concept__description {
+    margin-top: 11px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+  }
+
+  .project-page--kestra .project-concept__keywords {
+    margin-top: 27px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+  }
+
+  .project-page--kestra .project-style-guide {
+    margin-top: 67px;
+  }
+
+  .project-page--kestra .project-style-guide__image {
+    width: calc(100% - 48px);
+    max-width: none;
+    margin-bottom: 180px;
+  }
+
+  .project-page--kestra .full-design {
+    margin-top: 80px;
+  }
+
+  .project-page--kestra .full-design__subtitle {
+    display: block;
+  }
+
+  .project-page--kestra .full-design__layouts {
+    grid-template-columns: minmax(0, 900fr) 34px minmax(0, 190fr);
+    align-items: end;
+    gap: 0;
+    /* margin-top: clamp(80px, 9.583333vw, 138px); */
+    margin-top: 42px;
+  }
+
+  .project-page--kestra .full-design__frame--pc {
+    height: clamp(320px, 38.888889vw, 560px);
+  }
+
+  .project-page--kestra .full-design__frame--sp {
+    height: clamp(238px, 28.472222vw, 410px);
+    border-width: 3px;
+    border-radius: 22px;
+  }
+
+  .project-page--kestra .full-design__caption {
+    margin-top: 28px;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1.8px;
+    text-align: center;
+  }
+
+  .project-page--kestra .full-design__item--sp .full-design__caption {
+    justify-self: center;
+    margin-top: 23px;
+    font-size: clamp(9px, .833333vw, 12px);
+    letter-spacing: .15em;
+    text-align: center;
+  }
+
+  .project-page--kestra .full-design__scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 65px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 1.8px;
+  }
+
+  .project-page--kestra .full-design__scroll-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+
+  .project-page--kestra .full-design__scroll-line {
+    width: 1px;
+    height: 62px;
+    background: var(--color-line);
+  }
+
+  .project-page--kestra .project-navigation {
+    padding-block: clamp(100px, 11.805556vw, 170px) 52px;
+  }
+
+  .project-page--kestra .project-navigation .project-navigation__inner {
+    max-width: 1320px;
+  }
+
+  .project-page--kestra .project-navigation__link {
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 1.8px;
+  }
+
+  /* Keep the shared Contact typography within intermediate desktop widths. */
+  .project-page--kestra .contact__lead {
+    font-size: clamp(32px, 4.166667vw, 60px);
+    line-height: 1.4;
+    letter-spacing: .1em;
+  }
+}
+
+/* KESTRA View More：トップページと同じホバー演出 */
+.project-page--kestra .project-hero__link[href] .text-link__decoration {
+  transition: box-shadow .35s ease;
+}
+
+.project-page--kestra .project-hero__link[href] .text-link__decoration::after {
+  transition: right .35s ease, transform .35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .project-page--kestra .project-hero__link[href]:hover .text-link__decoration {
+    box-shadow: 22px 0 0 #898681;
+  }
+
+  .project-page--kestra .project-hero__link[href]:hover .text-link__decoration::after {
+    right: -24px;
+    transform: translateX(5px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .project-page--kestra .project-hero__link[href] .text-link__decoration,
+  .project-page--kestra .project-hero__link[href] .text-link__decoration::after {
+    transition: none;
+  }
+
+  .project-page--kestra .project-hero__link[href]:hover .text-link__decoration {
+    box-shadow: none;
+  }
+
+  .project-page--kestra .project-hero__link[href]:hover .text-link__decoration::after {
+    right: -3px;
+    transform: none;
+  }
+}
