@@ -337,12 +337,12 @@
   display: none;
 }
 
-/* スクロールできることを示す細いライン */
+/* スクロール位置に連動する細いバー（--full-design-progress は main.js が0〜1で更新。0のとき top は従来と同じ12px） */
 .project-page--kestra .full-design__frame::after {
   content: "";
   position: absolute;
   z-index: 2;
-  top: 12px;
+  top: calc(12px + (100% - 52px) * var(--full-design-progress, 0));
   right: 4px;
   width: 1px;
   height: 28px;
