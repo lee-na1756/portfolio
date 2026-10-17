@@ -603,11 +603,38 @@
     });
   }
 
+  // FULL DESIGN (work detail pages): the thin bar in each frame follows the scroll position of its own preview.
+  // PC and SP previews are independent; the native scroll event covers wheel, trackpad, touch and keyboard.
+  function initFullDesignScroll() {
+    document.querySelectorAll('.full-design__frame').forEach(frame => {
+      const preview = frame.querySelector('.full-design__preview');
+      if (!preview) return;
+      let queued = 0;
+      const update = () => {
+        queued = 0;
+        const range = preview.scrollHeight - preview.clientHeight;
+        const progress = range > 0 ? Math.min(1, Math.max(0, preview.scrollTop / range)) : 0;
+        frame.style.setProperty('--full-design-progress', progress.toFixed(4));
+      };
+      const request = () => { if (!queued) queued = requestAnimationFrame(update); };
+      preview.addEventListener('scroll', request, { passive: true });
+      const image = preview.querySelector('img');
+      image?.addEventListener('load', request);
+      if (typeof ResizeObserver === 'function') {
+        const observer = new ResizeObserver(request);
+        observer.observe(preview);
+        if (image) observer.observe(image);
+      }
+      request();
+    });
+  }
+
   initNavigation();
   initFixedHeader();
   initHero();
   initPointer();
   initReveals();
+  initFullDesignScroll();
   if (works) works.setAttribute('data-background-motion', '');
   window.addEventListener('scroll', () => { scrollDirty = true; requestFrame(); }, { passive: true });
   window.addEventListener('resize', invalidate, { passive: true });
@@ -643,3 +670,4 @@
   window.addEventListener('pageshow', invalidate);
   invalidate();
 })();
+
